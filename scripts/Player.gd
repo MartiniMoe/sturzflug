@@ -26,7 +26,9 @@ func movement(delta):
 	# Apply Gravity
 	linear_vel += delta * GRAVITY_VEC
 	# Move and Slide
+	var scale = get_scale()
 	linear_vel = move_and_slide( linear_vel, FLOOR_NORMAL, SLOPE_SLIDE_STOP )
+	set_scale(scale)
 	# Detect Floor
 	if (is_move_and_slide_on_floor()):
 		onair_time=0		
