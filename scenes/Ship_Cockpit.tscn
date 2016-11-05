@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=1]
 
-[ext_resource path="res://sprites/ship_bg/bg_cockpit.png" type="Texture" id=1]
+[ext_resource path="res://sprites/ship_small.png" type="Texture" id=1]
 [ext_resource path="res://sprites/cockpit.png" type="Texture" id=2]
 [ext_resource path="res://scripts/particles.gd" type="Script" id=3]
 [ext_resource path="res://sprites/thing_cross.png" type="Texture" id=4]
@@ -76,6 +76,7 @@ colors = ColorArray( 0, 0, 0, 0, 0.648438, 0, 0, 1, 0.612183, 0.664062, 0, 1, 0.
 
 [node name="BG" type="Sprite" parent="."]
 
+transform/pos = Vector2( -3274.42, -1220.81 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -135,7 +136,7 @@ trigger = false
 
 [node name="Particles2D" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 372.001, 107 )
+transform/pos = Vector2( 495.595, 135.393 )
 config/amount = 32
 config/lifetime = 2.0
 params/direction = 0.0
@@ -159,7 +160,7 @@ angle = 0
 
 [node name="Particles2D2" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 617.002, 199.001 )
+transform/pos = Vector2( 610.321, 210.692 )
 config/amount = 32
 config/lifetime = 2.0
 params/direction = 0.0
@@ -183,7 +184,7 @@ angle = 0
 
 [node name="Particles2D3" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 122, 514.002 )
+transform/pos = Vector2( 364.178, 732.797 )
 config/amount = 32
 config/lifetime = 2.0
 params/direction = 0.0
@@ -207,7 +208,7 @@ angle = 0
 
 [node name="Particles2D4" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 119, 353.001 )
+transform/pos = Vector2( 344.476, 1006.05 )
 config/amount = 32
 config/lifetime = 2.0
 params/direction = 0.0
@@ -293,14 +294,14 @@ texture = ExtResource( 9 )
 
 [node name="Flames" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 714.674, 417.026 )
+transform/pos = Vector2( 586.069, 528.929 )
 config/amount = 256
 config/lifetime = 2.0
 config/texture = ExtResource( 10 )
 params/direction = 0.0
 params/spread = 20.0
-params/linear_velocity = 200.0
-params/spin_velocity = 0.0
+params/linear_velocity = 300.0
+params/spin_velocity = 5.0
 params/orbit_velocity = 0.0
 params/gravity_direction = 85.0909
 params/gravity_strength = 400.0
@@ -323,14 +324,14 @@ angle = -95
 
 [node name="Flames2" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 714.674, 417.026 )
+transform/pos = Vector2( 586.069, 533.939 )
 config/amount = 256
 config/lifetime = 2.0
 config/texture = ExtResource( 10 )
 params/direction = 0.0
 params/spread = 20.0
-params/linear_velocity = 200.0
-params/spin_velocity = 0.0
+params/linear_velocity = 300.0
+params/spin_velocity = 5.0
 params/orbit_velocity = 0.0
 params/gravity_direction = 85.0909
 params/gravity_strength = 400.0
