@@ -4,7 +4,6 @@ var alarm
 
 func _fixed_process(delta):
 	if not get_overlapping_bodies().empty():
-		#print("something inside")
 		if(alarm.active and Input.is_action_just_pressed("ui_accept")):
 			alarm.stop_alarm()
 
