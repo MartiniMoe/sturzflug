@@ -23,6 +23,10 @@ const STATE_JUMPING = 2
 
 
 func _fixed_process(delta):
+	if get_node("Hint_timer").get_time_left() <= 0.0:
+		get_node("Hint_timer").stop()
+		get_node("Hint").hide()
+	
 	#increment counters
 	onair_time+=delta
 	
@@ -53,16 +57,18 @@ func movement(delta):
 	if (Input.is_action_pressed("move_left")):
 		target_speed += -1
 		set_scale(Vector2(-1, 1))
+		get_node("Hint").set_scale(Vector2(-1, 1))
 		player_state = STATE_WALKING
 	elif (Input.is_action_pressed("move_right")):
 		target_speed +=  1
 		set_scale(Vector2(1, 1))
+		get_node("Hint").set_scale(Vector2(1, 1))
 		player_state = STATE_WALKING
-	elif (on_floor and Input.is_action_just_pressed("jump")):
-		linear_vel.y=-JUMP_SPEED
-		player_state = STATE_JUMPING
 	else:
 		player_state = STATE_IDLE
+	if (on_floor and Input.is_action_just_pressed("jump")):
+		linear_vel.y=-JUMP_SPEED
+		player_state = STATE_JUMPING
 	
 	target_speed *= WALK_SPEED
 	linear_vel.x = lerp( linear_vel.x, target_speed, 0.1 )
@@ -76,6 +82,15 @@ func animate():
 		anim.play("walk")
 	elif player_state == STATE_JUMPING && current_anim != "jump":
 		anim.play("jump")
+
+
+func show_hint(hinttext):
+	var hint = get_node("Hint")
+	var hint_timer = get_node("Hint_timer")
+	if !hint.is_visible():
+		hint_timer.start()
+		hint.set_text(hinttext)
+		hint.show()
 
 
 func _ready():

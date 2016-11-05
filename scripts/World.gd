@@ -7,7 +7,8 @@ func _fixed_process(delta):
 	current_bg_pos += (falling_vector * 500 * delta)
 	get_node("ParallaxBackground").set_scroll_base_offset(current_bg_pos)
 	
-	get_node("Ship").set_rot(rand_range(-0.005, 0.005))
+	# shake dat cam.
+	get_node("Camera2D").set_rot(rand_range(-0.005, 0.005))
 
 
 func _ready():
