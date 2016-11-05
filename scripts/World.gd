@@ -1,6 +1,7 @@
 extends Node2D
 
 var falling_vector = Vector2(-1, -0.4)
+var score = 0
 
 func _fixed_process(delta):
 	var current_bg_pos = get_node("ParallaxBackground").get_scroll_base_offset()

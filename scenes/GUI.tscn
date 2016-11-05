@@ -1,7 +1,36 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
-[ext_resource path="res://sprites/madness_mod.png" type="Texture" id=2]
+[ext_resource path="res://resources/Kenney Future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/madness_mod.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 32
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
 
 [node name="GUI" type="Control"]
 
@@ -36,7 +65,8 @@ size_flags/vertical = 0
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 169.0
-margin/bottom = 14.0
+margin/bottom = 18.0
+custom_fonts/font = SubResource( 1 )
 text = "Madness"
 percent_visible = 1.0
 lines_skipped = 0
@@ -49,9 +79,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 18.0
+margin/top = 22.0
 margin/right = 169.0
-margin/bottom = 34.0
+margin/bottom = 38.0
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
@@ -68,20 +98,69 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 38.0
+margin/top = 42.0
 margin/right = 169.0
-margin/bottom = 52.0
+margin/bottom = 60.0
+custom_fonts/font = SubResource( 2 )
 text = "Madness Mod"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Madsess_Mod" type="Sprite" parent="VBoxContainer"]
+[node name="Madness_Mod" type="Sprite" parent="VBoxContainer"]
 
 transform/scale = Vector2( 0.55, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 centered = false
-offset = Vector2( 0, 150 )
+offset = Vector2( 0, 180 )
 vframes = 7
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 653.0
+margin/top = 22.0
+margin/right = 718.0
+margin/bottom = 80.0
+alignment = 0
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 65.0
+margin/bottom = 18.0
+custom_fonts/font = SubResource( 3 )
+text = "Score"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Score" type="Label" parent="VBoxContainer2"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 22.0
+margin/right = 65.0
+margin/bottom = 58.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 

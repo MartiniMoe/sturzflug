@@ -9,10 +9,14 @@ func _fixed_process(delta):
 		mad_mod = 3
 	elif mad_mod < -3:
 		mad_mod = -3
-	get_node("VBoxContainer/Madsess_Mod").set_frame(mad_mod+3)
+	get_node("VBoxContainer/Madness_Mod").set_frame(mad_mod+3)
 	get_node("VBoxContainer/Madness").set_val(mad)
+	
+	#set score
+	get_node("VBoxContainer2/Score").set_text(str(get_node("/root/World").score))
 
 
 func _ready():
 	set_fixed_process(true)
 	get_node("VBoxContainer").set_pos(Vector2(-900, -500))
+	get_node("VBoxContainer2").set_pos(Vector2(850, -500))
