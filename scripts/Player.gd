@@ -38,7 +38,7 @@ func movement(delta):
 	set_scale(scale)
 	# Detect Floor
 	if (is_move_and_slide_on_floor()):
-		onair_time=0		
+		onair_time=0
 	
 	on_floor = onair_time < MIN_ONAIR_TIME
 	
@@ -55,7 +55,7 @@ func movement(delta):
 		if !anim.is_playing() || anim.get_current_animation() != "walk":
 			anim.play("walk")
 	else:
-		if !anim.is_playing() || anim.get_current_animation() != "idle":
+		if (!anim.is_playing() || anim.get_current_animation() != "idle") && anim.get_current_animation() != "jump":
 			anim.play("idle")
 	
 	target_speed *= WALK_SPEED
@@ -64,6 +64,8 @@ func movement(delta):
 	# Jumping
 	if (on_floor and Input.is_action_just_pressed("jump")):
 		linear_vel.y=-JUMP_SPEED
+		#if !anim.is_playing() || anim.get_current_animation() != "jump":
+		#	anim.play("jump")
 
 
 func _ready():
