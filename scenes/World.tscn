@@ -39,7 +39,7 @@ centered = false
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 238.836, 394.163 )
+transform/pos = Vector2( 100.161, 332.362 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

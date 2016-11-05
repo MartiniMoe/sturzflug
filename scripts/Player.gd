@@ -37,6 +37,13 @@ func _fixed_process(delta):
 	animate()
 
 
+func in_lift():
+	for body in get_parent().get_node("Ship/Ship_Cockpit/Lifts").get_overlapping_bodies():
+		if body.is_in_group("player"):
+			return true
+	return false
+
+
 func lose_to_madness():
 	print("lose to madness")
 	gamestate.madness = 0
@@ -64,7 +71,8 @@ func alter_madness_mod(madness_mod_mod):
 
 func movement(delta):
 	# Apply Gravity
-	linear_vel += delta * GRAVITY_VEC
+	if !in_lift():
+		linear_vel += delta * GRAVITY_VEC
 	# Move and Slide
 	var scale = get_scale()
 	linear_vel = move_and_slide( linear_vel, FLOOR_NORMAL, SLOPE_SLIDE_STOP )
