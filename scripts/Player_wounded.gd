@@ -9,7 +9,7 @@ func _fixed_process(delta):
 		for body in get_node("TorsoArea").get_overlapping_bodies():
 			if alive and body.is_in_group("player"):
 				body.show_hint("Use to redeem")
-				if(alive and Input.is_action_just_pressed("ui_accept")):
+				if(alive and Input.is_action_just_pressed("use")):
 					die()
 
 
