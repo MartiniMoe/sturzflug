@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=16 format=1]
 
 [ext_resource path="res://sprites/ship_bg/bg_cockpit.png" type="Texture" id=1]
 [ext_resource path="res://sprites/cockpit.png" type="Texture" id=2]
 [ext_resource path="res://scripts/particles.gd" type="Script" id=3]
 [ext_resource path="res://scripts/Alarm.gd" type="Script" id=4]
-[ext_resource path="res://scripts/Terminal.gd" type="Script" id=5]
+[ext_resource path="res://sounds/alarm.smp" type="Sample" id=5]
+[ext_resource path="res://scripts/Terminal.gd" type="Script" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -41,7 +42,11 @@ points = Vector2Array( 120.717, 353.256, 119.902, 193.612, 151.668, 223.749, 150
 custom_solver_bias = 0.0
 points = Vector2Array( 344.707, 350.812, 120.717, 353.256, 150.854, 320.675, 344.707, 320.675 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="SampleLibrary" id=8]
+
+samples/alarm = { "db":0.0, "pitch":1.0, "sample":ExtResource( 5 ) }
+
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -212,25 +217,25 @@ params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
 config/polyphony = 1
-config/samples = null
+config/samples = SubResource( 8 )
 config/pitch_random = 0.0
 
 [node name="Terminal" type="Area2D" parent="."]
 
 transform/pos = Vector2( 201.546, 274.355 )
 input/pickable = true
-shapes/0/shape = SubResource( 8 )
+shapes/0/shape = SubResource( 9 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 5 )
+script/script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terminal"]
 
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 trigger = true
 _update_shape_index = 0
 
