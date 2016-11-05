@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=1]
+[gd_scene load_steps=23 format=1]
 
 [ext_resource path="res://sprites/ship_small.png" type="Texture" id=1]
 [ext_resource path="res://sprites/cockpit.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scripts/Terminal.gd" type="Script" id=8]
 [ext_resource path="res://sprites/display.png" type="Texture" id=9]
 [ext_resource path="res://sprites/flame_particle.png" type="Texture" id=10]
+[ext_resource path="res://scenes/Player_wounded.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -320,11 +321,11 @@ randomness/initial_size = 1.0
 randomness/final_size = 1.0
 color/color_ramp = SubResource( 11 )
 script/script = ExtResource( 3 )
-angle = -95
+angle = -110
 
 [node name="Flames2" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 586.069, 533.939 )
+transform/pos = Vector2( 559.346, 552.312 )
 config/amount = 256
 config/lifetime = 2.0
 config/texture = ExtResource( 10 )
@@ -350,6 +351,11 @@ randomness/initial_size = 1.0
 randomness/final_size = 1.0
 color/color_ramp = SubResource( 11 )
 script/script = ExtResource( 3 )
-angle = 85
+angle = 75
+
+[node name="NPC_wounded" parent="." instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 487.818, 427.222 )
+transform/scale = Vector2( -1, 1 )
 
 
