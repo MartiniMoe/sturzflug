@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=25 format=1]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/astronaut/Torso.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://sprites/astronaut/Hand right.png" type="Texture" id=14]
 [ext_resource path="res://sprites/astronaut/Head.png" type="Texture" id=15]
 [ext_resource path="res://resources/Kenney Future.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://scripts/player_event.gd" type="Script" id=17]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -467,6 +468,13 @@ font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 16 )
 
+[sub_resource type="DynamicFont" id=7]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 16 )
+
 [node name="Player" type="KinematicBody2D" groups=[ "player" ]]
 
 input/pickable = false
@@ -678,5 +686,28 @@ process_mode = 1
 wait_time = 0.2
 one_shot = true
 autostart = false
+
+[node name="Event" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = -40.0
+margin/right = 40.0
+margin/bottom = -26.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_constants/shadow_as_outline = 1
+text = "Event"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = ExtResource( 17 )
 
 

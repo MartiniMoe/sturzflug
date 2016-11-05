@@ -12,7 +12,8 @@ func _ready():
 	
 func stop_alarm():
 	active=false
-	get_node("/root/World/Player").madness_mod-=1
+	#get_node("/root/World/Player").madness_mod-=1
+	get_node("/root/World/Player").alter_madness_mod(-1)
 	
 	get_node("alarm_blink_player").stop_all()
 	get_node("alarm_blink_player").seek(0.5,true)

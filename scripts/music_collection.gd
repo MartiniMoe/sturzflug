@@ -22,9 +22,11 @@ func _fixed_process(delta):
 					music_player.set_stream(title_objects[ind])
 					music_player.play()
 					if good:
-						player.madness_mod-=1
+						#player.madness_mod-=1
+						player.alter_madness_mod(-1)
 					else:
-						player.madness_mod+=1
+						#player.madness_mod+=1
+						player.alter_madness_mod(1)
 					playing=true
 
 func _ready():

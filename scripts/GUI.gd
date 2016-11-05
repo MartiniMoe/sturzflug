@@ -13,7 +13,7 @@ func _fixed_process(delta):
 	get_node("VBoxContainer/Madness").set_val(mad)
 	
 	#set score
-	get_node("VBoxContainer2/Score").set_text(str(get_node("/root/World").score))
+	get_node("VBoxContainer2/Score").set_text(str(get_node("/root/World/Player").score))
 
 
 func _ready():

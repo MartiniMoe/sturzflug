@@ -13,6 +13,7 @@ var onair_time = 0 #
 var on_floor = false
 
 var anim
+var score = 0
 var madness = 0
 var madness_mod = 1
 
@@ -39,6 +40,20 @@ func handle_madness(delta):
 	madness += madness_mod * delta
 
 
+func add_to_score(scoreadd):
+	score += scoreadd
+	get_node("Event").show_event(str(scoreadd) + " score!")
+
+
+func alter_madness_mod(madness_mod_mod):
+	if madness_mod_mod > 0 && madness_mod < 3:
+		madness_mod += madness_mod_mod
+		get_node("Event").show_event(str(madness_mod_mod) + " madness!")
+	elif madness_mod_mod < 0 && madness_mod > -3:
+		madness_mod += madness_mod_mod
+		get_node("Event").show_event(str(madness_mod_mod) + " madness!")
+
+
 func movement(delta):
 	# Apply Gravity
 	linear_vel += delta * GRAVITY_VEC
@@ -58,11 +73,13 @@ func movement(delta):
 		target_speed += -1
 		set_scale(Vector2(-1, 1))
 		get_node("Hint").set_scale(Vector2(-1, 1))
+		get_node("Event").set_scale(Vector2(-1, 1))
 		player_state = STATE_WALKING
 	elif (Input.is_action_pressed("move_right")):
 		target_speed +=  1
 		set_scale(Vector2(1, 1))
 		get_node("Hint").set_scale(Vector2(1, 1))
+		get_node("Event").set_scale(Vector2(1, 1))
 		player_state = STATE_WALKING
 	else:
 		player_state = STATE_IDLE

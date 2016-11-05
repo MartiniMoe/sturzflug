@@ -15,7 +15,8 @@ func _fixed_process(delta):
 
 func die():
 	alive = false
-	get_node("/root/World").score += 100
+	#get_node("/root/World").score += 100
+	get_node("/root/World/Player").add_to_score(100)
 	get_node("AnimationPlayer").play("die")
 	get_node("TorsoArea/Particles2D").set_emitting(false)
 

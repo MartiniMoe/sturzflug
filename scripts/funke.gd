@@ -9,7 +9,8 @@ func _fixed_process(delta):
 				body.show_hint("Send out important data")
 				if(Input.is_action_just_pressed("use")):
 					funk_send=true
-					get_node("/root/World").score += 200
+					#get_node("/root/World").score += 200
+					get_node("/root/World/Player").add_to_score(200)
 
 func _ready():
 	funk_send=false
