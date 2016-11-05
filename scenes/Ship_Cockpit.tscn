@@ -235,14 +235,13 @@ angle = 0
 
 [node name="Alarm" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 164.029, 387.997 )
 texture = ExtResource( 4 )
 script/script = ExtResource( 5 )
 
 [node name="Alarm_Player" type="SamplePlayer2D" parent="Alarm"]
 
-params/volume_db = 0.0
+params/volume_db = -5.0
 params/pitch_scale = 1.0
 params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
