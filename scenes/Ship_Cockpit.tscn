@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://sprites/ship_small.png" type="Texture" id=1]
 [ext_resource path="res://sprites/cockpit.png" type="Texture" id=2]
@@ -361,8 +361,8 @@ angle = 75
 transform/pos = Vector2( 487.818, 427.222 )
 transform/scale = Vector2( -1, 1 )
 
-[node name="music_collection" parent="." instance=ExtResource( 11 )]
+[node name="music_collection" parent="." instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 264.9, 395.247 )
+transform/pos = Vector2( 260.55, 395.836 )
 
 

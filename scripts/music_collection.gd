@@ -12,17 +12,20 @@ var player
 
 func _fixed_process(delta):
 	if not get_overlapping_bodies().empty():
-		var ind=randi()%title_list.size()
-		var title=title_list[ind]
-		var good=title_good[ind]
-		if(not playing and Input.is_action_just_pressed("use")):
-			music_player.set_stream(title_objects[ind])
-			music_player.play()
-			if good:
-				player.madness_mod-=1
-			else:
-				player.madness_mod+=1
-			playing=true
+		for body in get_overlapping_bodies():
+			if not playing and body.is_in_group("player"):
+				body.show_hint("Play some music")
+				var ind=randi()%title_list.size()
+				var title=title_list[ind]
+				var good=title_good[ind]
+				if(not playing and Input.is_action_just_pressed("use")):
+					music_player.set_stream(title_objects[ind])
+					music_player.play()
+					if good:
+						player.madness_mod-=1
+					else:
+						player.madness_mod+=1
+					playing=true
 
 func _ready():
 	music_player=get_node("music_player")
