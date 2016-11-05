@@ -13,8 +13,6 @@ var onair_time = 0 #
 var on_floor = false
 
 var anim
-var score = 0
-var madness = 0
 var madness_mod = 1
 
 var player_state = STATE_IDLE
@@ -28,6 +26,9 @@ func _fixed_process(delta):
 		get_node("Hint_timer").stop()
 		get_node("Hint").hide()
 	
+	if gamestate.madness > 100:
+		lose_to_madness()
+	
 	#increment counters
 	onair_time+=delta
 	
@@ -36,12 +37,19 @@ func _fixed_process(delta):
 	animate()
 
 
+func lose_to_madness():
+	print("lose to madness")
+	gamestate.madness = 0
+	Transition.fade_to("res://scenes/gameover_madness.tscn")
+
+
 func handle_madness(delta):
-	madness += madness_mod * delta
+	gamestate.madness += madness_mod * delta
 
 
 func add_to_score(scoreadd):
-	score += scoreadd
+	#score += scoreadd
+	gamestate.score += scoreadd
 	get_node("Event").show_event(str(scoreadd) + " score!")
 
 

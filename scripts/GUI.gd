@@ -4,7 +4,7 @@ extends Control
 func _fixed_process(delta):
 	#set madness_mod
 	var mad_mod = get_node("/root/World/Player").madness_mod
-	var mad = get_node("/root/World/Player").madness
+	var mad = gamestate.madness
 	if mad_mod > 3:
 		mad_mod = 3
 	elif mad_mod < -3:
@@ -13,7 +13,7 @@ func _fixed_process(delta):
 	get_node("VBoxContainer/Madness").set_val(mad)
 	
 	#set score
-	get_node("VBoxContainer2/Score").set_text(str(get_node("/root/World/Player").score))
+	get_node("VBoxContainer2/Score").set_text(str(gamestate.score))
 
 
 func _ready():
