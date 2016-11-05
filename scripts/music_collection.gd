@@ -12,9 +12,9 @@ var player
 
 func _fixed_process(delta):
 	if not get_overlapping_bodies().empty():
-		ind=randi()%title_list.len()
-		title=title_list[ind]
-		good=title_good[ind]
+		var ind=randi()%title_list.size()
+		var title=title_list[ind]
+		var good=title_good[ind]
 		if(not playing and Input.is_action_just_pressed("use")):
 			music_player.set_stream(title_objects[ind])
 			music_player.play()
@@ -29,6 +29,6 @@ func _ready():
 	player=get_node("/root/World/Player")
 	title_objects=[]
 	for title in title_list:
-		title_objects.append(load(title))
+		title_objects.append(load("res://sounds/" + title))
 	playing=false
 	set_fixed_process(true)

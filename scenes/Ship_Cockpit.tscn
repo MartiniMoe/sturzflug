@@ -11,6 +11,7 @@
 [ext_resource path="res://sprites/display.png" type="Texture" id=9]
 [ext_resource path="res://sprites/flame_particle.png" type="Texture" id=10]
 [ext_resource path="res://scenes/Player_wounded.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/music_collection.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -83,6 +84,7 @@ centered = false
 
 [node name="Rooms" type="RigidBody2D" parent="."]
 
+editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -233,6 +235,7 @@ angle = 0
 
 [node name="Alarm" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 164.029, 387.997 )
 texture = ExtResource( 4 )
 script/script = ExtResource( 5 )
@@ -357,5 +360,9 @@ angle = 75
 
 transform/pos = Vector2( 487.818, 427.222 )
 transform/scale = Vector2( -1, 1 )
+
+[node name="music_collection" parent="." instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 264.9, 395.247 )
 
 

@@ -30,7 +30,7 @@ scroll/ignore_camera_zoom = false
 
 motion/scale = Vector2( 1, 1 )
 motion/offset = Vector2( 0, 0 )
-motion/mirroring = Vector2( 1920, 1080 )
+motion/mirroring = Vector2( 1024, 600 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 
@@ -44,7 +44,7 @@ transform/pos = Vector2( 238.836, 394.163 )
 [node name="Camera2D" type="Camera2D" parent="."]
 
 anchor_mode = 1
-rotating = true
+rotating = false
 current = true
 zoom = Vector2( 1, 1 )
 limit/left = -10000000
