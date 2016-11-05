@@ -7,7 +7,7 @@ var alive = true
 func _fixed_process(delta):
 	if not get_node("TorsoArea").get_overlapping_bodies().empty():
 		for body in get_node("TorsoArea").get_overlapping_bodies():
-			if body.is_in_group("player"):
+			if alive and body.is_in_group("player"):
 				body.show_hint("Use to redeem")
 				if(alive and Input.is_action_just_pressed("ui_accept")):
 					die()
