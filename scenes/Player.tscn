@@ -279,7 +279,6 @@ __meta__ = { "_edit_bone_":true }
 
 transform/pos = Vector2( 0.811866, 9.04676 )
 transform/rot = -2.05751
-transform/scale = Vector2( 1, 1 )
 z/z = -1
 texture = ExtResource( 5 )
 offset = Vector2( 2.08768, 0.811878 )
@@ -311,7 +310,6 @@ __meta__ = { "_edit_bone_":true }
 
 transform/pos = Vector2( 1.33514e-05, 9.63849 )
 transform/rot = 33.6204
-transform/scale = Vector2( 1, 1 )
 z/z = -1
 texture = ExtResource( 8 )
 offset = Vector2( 2.1847, 0.899586 )
@@ -376,7 +374,6 @@ __meta__ = { "_edit_bone_":true }
 
 transform/pos = Vector2( -11.3091, -5.72205e-06 )
 transform/rot = 67.0793
-transform/scale = Vector2( 1, 1 )
 z/z = -1
 texture = ExtResource( 14 )
 offset = Vector2( -1.92768, -0.128513 )

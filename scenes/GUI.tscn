@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
+[ext_resource path="res://sprites/madness_mod.png" type="Texture" id=2]
 
 [node name="GUI" type="Control"]
 
@@ -60,7 +61,7 @@ range/exp_edit = false
 range/rounded = false
 percent/visible = true
 
-[node name="Madness Modifikator" type="Label" parent="VBoxContainer"]
+[node name="Label1" type="Label" parent="VBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -75,23 +76,12 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="HScrollBar" type="HScrollBar" parent="VBoxContainer"]
+[node name="Madsess_Mod" type="Sprite" parent="VBoxContainer"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 56.0
-margin/right = 169.0
-margin/bottom = 68.0
-range/min = -10.0
-range/max = 10.0
-range/step = 1.0
-range/page = 0.0
-range/value = 0.0
-range/exp_edit = false
-range/rounded = false
-custom_step = -1.0
+transform/scale = Vector2( 0.55, 0.3 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 0, 150 )
+vframes = 7
 
 

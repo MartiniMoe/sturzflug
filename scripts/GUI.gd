@@ -2,8 +2,11 @@ extends Control
 
 
 func _fixed_process(delta):
-	#set_global_pos(Vector2(0, 0))
-	pass
+	#set madness_mod
+	var mad_mod = get_node("/root/World/Player").madness_mod
+	var mad = get_node("/root/World/Player").madness
+	get_node("VBoxContainer/Madsess_Mod").set_frame(mad_mod+3)
+	get_node("VBoxContainer/Madness").set_val(mad)
 
 
 func _ready():

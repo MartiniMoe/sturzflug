@@ -13,6 +13,8 @@ var onair_time = 0 #
 var on_floor = false
 
 var anim
+var madness = 0
+var madness_mod = 1
 
 
 func _fixed_process(delta):
@@ -20,6 +22,11 @@ func _fixed_process(delta):
 	onair_time+=delta
 	
 	movement(delta)
+	handle_madness(delta)
+
+
+func handle_madness(delta):
+	madness += madness_mod * delta
 
 
 func movement(delta):
