@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://scripts/Camera.gd" type="Script" id=3]
+[ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=4]
 
 [node name="Teststage" type="Node2D"]
 
@@ -26,5 +28,28 @@ collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
 tile_data = IntArray( 720922, 15, 720923, 22, 720924, 23, 720925, 24, 720926, 31, 720927, 32, 786458, 16, 786459, 20, 786460, 21, 786461, 25, 786462, 29, 786463, 30, 851994, 17, 851995, 18, 851996, 19, 851997, 26, 851998, 27, 851999, 28, 917504, 35, 917505, 35, 917506, 35, 917507, 35, 917508, 35, 917509, 35, 917510, 35, 917511, 35, 917512, 35, 917513, 35, 917514, 35, 917515, 35, 917516, 35, 917517, 35, 917518, 35, 917519, 35, 917520, 35, 917521, 35, 917522, 35, 917523, 35, 917524, 35, 917525, 35, 917526, 35, 917527, 35, 917528, 35, 917529, 35, 917530, 35, 917531, 35, 917532, 35, 917533, 35, 917534, 35, 917535, 35 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+limit/smoothed = false
+drag_margin/h_enabled = false
+drag_margin/v_enabled = false
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = ExtResource( 3 )
+
+[node name="GUI" parent="Camera2D" instance=ExtResource( 4 )]
 
 

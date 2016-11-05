@@ -5,7 +5,7 @@ const FLOOR_NORMAL = Vector2(0,-1)
 const SLOPE_SLIDE_STOP = 25.0
 const MIN_ONAIR_TIME = 0.1
 const WALK_SPEED = 250 # pixels/sec
-const JUMP_SPEED = 280
+const JUMP_SPEED = 480
 const SIDING_CHANGE_SPEED = 10
 
 var linear_vel = Vector2()
