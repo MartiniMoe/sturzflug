@@ -22,7 +22,7 @@ func _fixed_process(delta):
 	get_node("Camera2D").set_rot(rand_range(-0.005, 0.005))
 	
 	# rotate falling vector
-	falling_vector = falling_vector.rotated(-0.005 * delta)
+	falling_vector = falling_vector.rotated(-0.003 * delta)
 	get_node("Ship").set_rot(falling_vector.angle() + 0.62 * PI)
 
 
