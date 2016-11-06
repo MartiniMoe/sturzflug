@@ -13,7 +13,7 @@ var onair_time = 0 #
 var on_floor = false
 
 var anim
-var madness_mod = 1
+var madness_mod = 2
 
 var player_state = STATE_IDLE
 const STATE_IDLE = 0
