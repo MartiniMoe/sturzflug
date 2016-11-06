@@ -10,7 +10,7 @@ func _fixed_process(delta):
 				body.show_hint("Take a pill")
 				if(Input.is_action_just_pressed("use")):
 					pill_taken=true
-					if randi()%2==0:
+					if randi()%3!=0:
 						player.alter_madness_mod(-1)
 					else:
 						player.alter_madness_mod(1)

@@ -461,6 +461,7 @@ centered = false
 
 [node name="Rooms" type="RigidBody2D" parent="."]
 
+editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 57 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -1070,7 +1071,11 @@ transform/pos = Vector2( -1159.42, 182.997 )
 
 [node name="music_collection" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( -278.876, 535.196 )
+transform/pos = Vector2( -378.825, -60.5677 )
+
+[node name="music_collection2" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -2120.97, 641.829 )
 
 [node name="NPC_wounded" parent="." instance=ExtResource( 7 )]
 
@@ -1089,12 +1094,49 @@ transform/pos = Vector2( -882.799, -51.554 )
 
 transform/pos = Vector2( 205.001, 81.0006 )
 
+[node name="Funke2" parent="." instance=ExtResource( 8 )]
+
+transform/pos = Vector2( -2037.77, 49.699 )
+
 [node name="med-station" parent="." instance=ExtResource( 9 )]
 
-transform/pos = Vector2( -950.464, 414.335 )
+transform/pos = Vector2( -831.531, 129.307 )
+
+[node name="med-station2" parent="." instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -1789.14, 340.515 )
 
 [node name="Fire" parent="." instance=ExtResource( 10 )]
 
 transform/pos = Vector2( -198.083, 343.174 )
+
+[node name="NPC_wounded4" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( -797.334, 429.775 )
+transform/scale = Vector2( -1, 1 )
+
+[node name="NPC_wounded5" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( -2226.05, 357.88 )
+
+[node name="Fire2" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( -705.393, 120.983 )
+
+[node name="Fire3" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( -711.544, 340.393 )
+
+[node name="Fire4" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( -1484.61, 344.661 )
+
+[node name="Fire6" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( -1616, 24.5014 )
+
+[node name="Fire5" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( -1766.57, 530.143 )
 
 
