@@ -896,6 +896,6 @@ transform/pos = Vector2( -950.464, 414.335 )
 
 [node name="Fire" parent="." instance=ExtResource( 11 )]
 
-transform/pos = Vector2( -252.219, 344.494 )
+transform/pos = Vector2( -198.083, 343.174 )
 
 

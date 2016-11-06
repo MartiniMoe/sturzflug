@@ -11,9 +11,9 @@ func _fixed_process(delta):
 				if(Input.is_action_just_pressed("use")):
 					pill_taken=true
 					if randi()%2==0:
-						player.madness_mod-=1
+						player.alter_madness_mod(-1)
 					else:
-						player.madness_mod+=1
+						player.alter_madness_mod(1)
 
 func _ready():
 	pill_taken=false
