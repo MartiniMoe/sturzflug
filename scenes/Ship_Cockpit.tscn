@@ -871,7 +871,7 @@ transform/pos = Vector2( -1159.42, 182.997 )
 
 [node name="music_collection" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( -278.876, 535.196 )
+transform/pos = Vector2( -308.281, -61.831 )
 
 [node name="NPC_wounded" parent="." instance=ExtResource( 8 )]
 
