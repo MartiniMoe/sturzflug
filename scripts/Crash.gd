@@ -15,4 +15,5 @@ func _ready():
 	#get_node("StreamPlayer").seek_pos(26)
 	get_node("StreamPlayer").set_stream(load("res://sounds/crash.ogg"))
 	get_node("StreamPlayer").play(16.2)
+	get_node("Score").set_text("Score: " + str(gamestate.score))
 	set_fixed_process(true)

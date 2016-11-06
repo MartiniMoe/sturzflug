@@ -1,16 +1,15 @@
-[gd_scene load_steps=74 format=1]
+[gd_scene load_steps=73 format=1]
 
 [ext_resource path="res://sprites/spaceship_rooms.png" type="Texture" id=1]
-[ext_resource path="res://sprites/cockpit.png" type="Texture" id=2]
-[ext_resource path="res://scripts/particles.gd" type="Script" id=3]
-[ext_resource path="res://sprites/flame_particle.png" type="Texture" id=4]
-[ext_resource path="res://scenes/Terminal.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Alarm.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/music_collection.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/Player_wounded.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/Funke.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/med-station.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/Fire.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scripts/particles.gd" type="Script" id=2]
+[ext_resource path="res://sprites/flame_particle.png" type="Texture" id=3]
+[ext_resource path="res://scenes/Terminal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Alarm.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/music_collection.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Player_wounded.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Funke.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/med-station.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Fire.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -332,7 +331,6 @@ centered = false
 
 [node name="Rooms" type="RigidBody2D" parent="."]
 
-editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -517,12 +515,6 @@ velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 
-[node name="BG Rooms" type="Sprite" parent="Rooms"]
-
-visibility/visible = false
-transform/pos = Vector2( 328, 336 )
-texture = ExtResource( 2 )
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rooms"]
 
 build_mode = 0
@@ -593,7 +585,7 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-script/script = ExtResource( 3 )
+script/script = ExtResource( 2 )
 angle = 0
 
 [node name="Particles2D2" type="Particles2D" parent="."]
@@ -617,7 +609,7 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-script/script = ExtResource( 3 )
+script/script = ExtResource( 2 )
 angle = 0
 
 [node name="Particles2D3" type="Particles2D" parent="."]
@@ -641,7 +633,7 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-script/script = ExtResource( 3 )
+script/script = ExtResource( 2 )
 angle = 0
 
 [node name="Particles2D4" type="Particles2D" parent="."]
@@ -665,7 +657,7 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-script/script = ExtResource( 3 )
+script/script = ExtResource( 2 )
 angle = 0
 
 [node name="Flames" type="Particles2D" parent="."]
@@ -673,7 +665,7 @@ angle = 0
 transform/pos = Vector2( 586.069, 528.929 )
 config/amount = 256
 config/lifetime = 2.0
-config/texture = ExtResource( 4 )
+config/texture = ExtResource( 3 )
 params/direction = 0.0
 params/spread = 20.0
 params/linear_velocity = 300.0
@@ -695,7 +687,7 @@ randomness/initial_angle = 1.0
 randomness/initial_size = 1.0
 randomness/final_size = 1.0
 color/color_ramp = SubResource( 56 )
-script/script = ExtResource( 3 )
+script/script = ExtResource( 2 )
 angle = -110
 
 [node name="Flames2" type="Particles2D" parent="."]
@@ -703,7 +695,7 @@ angle = -110
 transform/pos = Vector2( 559.346, 552.312 )
 config/amount = 256
 config/lifetime = 2.0
-config/texture = ExtResource( 4 )
+config/texture = ExtResource( 3 )
 params/direction = 0.0
 params/spread = 20.0
 params/linear_velocity = 300.0
@@ -725,7 +717,7 @@ randomness/initial_angle = 1.0
 randomness/initial_size = 1.0
 randomness/final_size = 1.0
 color/color_ramp = SubResource( 56 )
-script/script = ExtResource( 3 )
+script/script = ExtResource( 2 )
 angle = 75
 
 [node name="Lifts" type="Area2D" parent="." groups=[ "lift" ]]
@@ -797,7 +789,7 @@ polygon = Vector2Array( -1193.81, 450.929, -1193.07, 238.486, -1126.91, 237.016,
 shape_range = Vector2( 5, 5 )
 trigger = false
 
-[node name="Terminal" parent="." instance=ExtResource( 5 )]
+[node name="Terminal" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -185.073, 211.625 )
 
@@ -805,96 +797,96 @@ transform/pos = Vector2( -185.073, 211.625 )
 
 editor/display_folded = true
 
-[node name="Alarm" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -443.433, 341.269 )
 
-[node name="Alarm7" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm7" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -253.507, 341.269 )
 
-[node name="Alarm4" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm4" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -548.948, -97.3697 )
 
-[node name="Alarm8" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm8" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -1049.39, 338.254 )
 
-[node name="Alarm2" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm2" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -345.455, -100.384 )
 
-[node name="Alarm12" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm12" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -859.462, 339.762 )
 
-[node name="Alarm6" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm6" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -48.5073, 9.65218 )
 
-[node name="Alarm10" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm10" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -668.028, 342.776 )
 
-[node name="Alarm17" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm17" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -668.028, 342.776 )
 
-[node name="Alarm3" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm3" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 130.867, 341.269 )
 
-[node name="Alarm14" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm14" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -1243.84, 338.254 )
 
-[node name="Alarm9" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm9" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -689.131, 113.659 )
 
-[node name="Alarm5" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm5" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -57.5514, 342.776 )
 
-[node name="Alarm15" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm15" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -556.484, 113.659 )
 
-[node name="Alarm11" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm11" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -756.962, -95.8623 )
 
-[node name="Alarm13" parent="Alarms" instance=ExtResource( 6 )]
+[node name="Alarm13" parent="Alarms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -1159.42, 182.997 )
 
-[node name="music_collection" parent="." instance=ExtResource( 7 )]
+[node name="music_collection" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( -308.281, -61.831 )
+transform/pos = Vector2( -278.876, 535.196 )
 
-[node name="NPC_wounded" parent="." instance=ExtResource( 8 )]
+[node name="NPC_wounded" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 338.47, 362.749 )
 
-[node name="NPC_wounded2" parent="." instance=ExtResource( 8 )]
+[node name="NPC_wounded2" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( -1299.21, 229.549 )
 transform/scale = Vector2( -1, 1 )
 
-[node name="NPC_wounded3" parent="." instance=ExtResource( 8 )]
+[node name="NPC_wounded3" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( -882.799, -51.554 )
 
-[node name="Funke" parent="." instance=ExtResource( 9 )]
+[node name="Funke" parent="." instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 205.001, 81.0006 )
 
-[node name="med-station" parent="." instance=ExtResource( 10 )]
+[node name="med-station" parent="." instance=ExtResource( 9 )]
 
 transform/pos = Vector2( -950.464, 414.335 )
 
-[node name="Fire" parent="." instance=ExtResource( 11 )]
+[node name="Fire" parent="." instance=ExtResource( 10 )]
 
 transform/pos = Vector2( -198.083, 343.174 )
 

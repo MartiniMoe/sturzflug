@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://scripts/Crash.gd" type="Script" id=1]
 [ext_resource path="res://sprites/bg_star.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://sprites/ship_tiny.png" type="Texture" id=5]
 [ext_resource path="res://sprites/white.png" type="Texture" id=6]
 [ext_resource path="res://sounds/crash.ogg" type="AudioStream" id=7]
+[ext_resource path="res://resources/Kenney Future.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -34,6 +35,13 @@ tracks/1/path = NodePath("Planet/Mushroom_Cloud:visibility/visible")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = { "times":FloatArray( 0, 0.2, 4 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ false, true, true ] }
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 64
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 8 )
 
 [node name="Crash" type="Node2D"]
 
@@ -139,5 +147,24 @@ stream/autoplay = false
 stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
+
+[node name="Score" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 78.0
+margin/top = 939.0
+margin/right = 343.0
+margin/bottom = 1011.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 1
+text = "Score"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 
