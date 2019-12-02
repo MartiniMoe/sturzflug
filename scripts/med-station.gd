@@ -8,7 +8,7 @@ func _fixed_process(delta):
 		for body in get_overlapping_bodies():
 			if not pill_taken and body.is_in_group("player"):
 				body.show_hint("Take a pill")
-				if(Input.is_action_just_pressed("use")):
+				if(not pill_taken and Input.is_action_pressed("use")):
 					pill_taken=true
 					if randi()%3!=0:
 						player.alter_madness_mod(-1)

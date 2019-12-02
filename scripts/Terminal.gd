@@ -12,7 +12,7 @@ func _fixed_process(delta):
 			for body in get_overlapping_bodies():
 				if body.is_in_group("player"):
 					body.show_hint("Use to deactivate alarm")
-					if Input.is_action_just_pressed("use"):
+					if (active and Input.is_action_pressed("use")):
 						for alarm in alarms:
 							alarm.stop_alarm()
 						alarm_player.stop_all()

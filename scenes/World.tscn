@@ -11,7 +11,15 @@
 
 [sub_resource type="CanvasItemShader" id=1]
 
-_code = { "fragment":"COLOR=vec4( texscreen(SCREEN_UV), 1.0 );\n//COLOR=vec4(1,0,1,1);", "fragment_ofs":0, "light":"", "light_ofs":0, "vertex":"", "vertex_ofs":0 }
+_code = {
+"fragment": "COLOR=vec4( texscreen(SCREEN_UV), 1.0 );
+//COLOR=vec4(1,0,1,1);",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
 
 [sub_resource type="CanvasItemMaterial" id=2]
 
@@ -62,7 +70,6 @@ limit/left = -10000000
 limit/top = -10000000
 limit/right = 10000000
 limit/bottom = 10000000
-limit/smoothed = false
 drag_margin/h_enabled = false
 drag_margin/v_enabled = false
 smoothing/enable = false

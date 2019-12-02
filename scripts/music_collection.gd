@@ -18,7 +18,7 @@ func _fixed_process(delta):
 				var ind=randi()%title_list.size()
 				var title=title_list[ind]
 				var good=title_good[ind]
-				if(not playing and Input.is_action_just_pressed("use")):
+				if(not playing and Input.is_action_pressed("use")):
 					music_player.set_stream(title_objects[ind])
 					music_player.play()
 					if good:

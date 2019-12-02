@@ -9,7 +9,7 @@ func _fixed_process(delta):
 		for body in get_overlapping_bodies():
 			if burning and body.is_in_group("player"):
 				body.show_hint("Extinguish fire")
-				if(Input.is_action_just_pressed("use")):
+				if(burning and Input.is_action_pressed("use")):
 					burning=false
 					get_node("/root/World/Player").add_to_score(200)
 					get_node("FireParticles3").set_emitting(false)

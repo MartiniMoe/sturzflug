@@ -99,7 +99,7 @@ func movement(delta):
 		player_state = STATE_WALKING
 	else:
 		player_state = STATE_IDLE
-	if (on_floor and Input.is_action_just_pressed("jump")):
+	if (on_floor and Input.is_action_pressed("jump")):
 		linear_vel.y=-JUMP_SPEED
 		player_state = STATE_JUMPING
 	
